@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemical Supplies Table</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Chemical Supplies</h1>
+        <div class="toolbar mb-3">
+            <button class="btn btn-primary" id="addRow">➕ Add Row</button>
+            <button class="btn btn-secondary" id="moveUp">⬆️ Move Up</button>
+            <button class="btn btn-secondary" id="moveDown">⬇️ Move Down</button>
+            <button class="btn btn-danger" id="deleteRow">🗑️ Delete Row</button>
+            <button class="btn btn-info" id="refresh">🔄 Refresh</button>
+            <button class="btn btn-success" id="save">💾 Save</button>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped" id="chemicalTable">
+                <thead class="thead-light">
+                    <tr>
+                        <th>
+                            <input type="checkbox" id="selectAll" title="Select/Deselect All">
+                        </th>
+                        <th>ID</th>
+                        <th>Chemical Name</th>
+                        <th>Vendor</th>
+                        <th>Density (g/m³)</th>
+                        <th>Viscosity (m²/s)</th>
+                        <th>Packaging</th>
+                        <th>Pack Size</th>
+                        <th>Unit</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
